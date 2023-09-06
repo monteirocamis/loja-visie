@@ -1,24 +1,28 @@
 
-import { Container} from '@mui/material'
-import { Route, Routes } from 'react-router-dom'
-import { Home } from './pages/Home'
-import { Store } from './pages/Store'
-import { About } from './pages/About'
+
+import { Router } from "./router";
+
 import Navbar from './components/Navbar'
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {  purple } from '@mui/material/colors';
+
+
+const theme = createTheme({
+  palette: {
+    primary: purple,
+
+  },
+});
 
 function App() {
 
-  return (
-    <>
+  return (<>
+    <ThemeProvider theme={theme}>
     <Navbar/>
-    <Container> 
-    <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/store' element={<Store/>}/>
-      <Route path='/about' element={<About/>}/>
-    </Routes>
-    </Container>
-    </>
+ 
+    <Router/>
+    </ThemeProvider>
+  </>
   )
 }
 
