@@ -35,17 +35,17 @@ Deploy de build automático e gratuito para visualização do projeto pela Verce
 
 ## 🛠️ Construído com
 
-* [React e Typescript](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
-* [Vite](https://maven.apache.org/) - Gerente de Dependência
-* [MaterialUI](https://rometools.github.io/rome/) - Usada para gerar componentes pré estilizados
-* [Styled-components](https://rometools.github.io/rome/) - Usada para personalizar e componentizar CSS
-* [Axios](https://rometools.github.io/rome/) - Otimização dde sintaxe para consumo de APIs
-* [Jest](https://rometools.github.io/rome/) - Testes Unitários
-* [API](https://rometools.github.io/rome/) - API externa para produtos
+* [React e Typescript](http:///) - O framework web usado
+* [Vite](https:///) - Gerente de Dependência
+* [MaterialUI](https://mui.com/material-ui/getting-started/) - Usada para gerar componentes pré estilizados
+* [Styled-components](https:///) - Usada para personalizar e componentizar CSS
+* [Axios](https:///) - Otimização dde sintaxe para consumo de APIs
+* [Jest](https:///) - Testes Unitários
+* [API](https://dummyjson.com/docs/products/) - API externa para produtos
 
 ## ✒️ Autores
 
-* **Desenvolvedora** - *Todo o projeto* -  [Camis Monteiro](https://gist.github.com/monteirocamis) 
+* **Desenvolvedora**  -  [Camis Monteiro](https://gist.github.com/monteirocamis) 
 
 ## 📄 Licença
 
