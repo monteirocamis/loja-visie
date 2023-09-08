@@ -1,4 +1,4 @@
-# Título do projeto
+# Dummy Store 
 
 Site com layout resumido para simulação de e-commerce, em processo seletivo da empresa Visie.
 
@@ -36,10 +36,11 @@ Deploy de build automático e gratuito para visualização do projeto pela Verce
 ## 🛠️ Construído com
 
 * [React e Typescript](http:///) - O framework web usado
-* [Vite](https:///) - Gerente de Dependência
-* [MaterialUI](https://mui.com/material-ui/getting-started/) - Usada para gerar componentes pré estilizados
+* [Vite](https://vitejs.dev/) - Developmnent environment
+* [Bootstrap](https://react-bootstrap.netlify.app/docs/getting-started/introduction) - Usada para gerar componentes pré estilizados
+<!-- * [MaterialUI](https://mui.com/material-ui/getting-started/) - Usada para gerar componentes pré estilizados -->
 * [Styled-components](https:///) - Usada para personalizar e componentizar CSS
-* [Axios](https:///) - Otimização dde sintaxe para consumo de APIs
+* [Axios](https:///) - Otimização de sintaxe para consumo de APIs
 * [Jest](https:///) - Testes Unitários
 * [API](https://dummyjson.com/docs/products/) - API externa para produtos
 
@@ -53,7 +54,7 @@ MIT
 
 ## 🎁 Expressões de gratidão
 
-* Obrigada Marcelo e  Visie pela oportunidade de demonstrar meus conhecimentos.
+* Obrigada Marcelo e Visie pela oportunidade de demonstrar meus conhecimentos.
 
 
 ---

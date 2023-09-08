@@ -3,9 +3,10 @@ import { Container } from "react-bootstrap"
 import { Home } from "./pages/Home"
 import { Store } from "./pages/Store"
 import { About } from "./pages/About"
+import { ProductDetails } from "./pages/ProductDetails"
 import { Navbar } from "./components/Navbar"
 import { ShoppingCartProvider } from "./context/ShoppingCartContext"
-import {Router} from './components/router'
+
 
 function App() {
   return (
@@ -13,9 +14,10 @@ function App() {
       <Navbar />
       <Container className="mb-4">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/store" element={<Store />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/" element={<Store />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/productdetails" element={<ProductDetails />} />
+          {/* <Route path="/about" element={<About />} /> */}
         </Routes>
         {/* <Router/> */}
       </Container>
