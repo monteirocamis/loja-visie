@@ -15,7 +15,7 @@ type ProductItemProps = {
   brand: string;
   discountPercentage: number;
   description: string;
-  rating: string;
+  rating: number;
   stock: number;
 };
 
