@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useContext, useState } from "react"
+import {  ReactNode } from "react"
 
  export type  ShoppingCartProps = {
     isOpen: boolean
