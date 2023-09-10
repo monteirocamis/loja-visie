@@ -4,7 +4,6 @@ import { formatCurrency } from "../utilities/formatCurrency";
 import blackHeart from "../images/blackHeart.svg";
 import whiteHeart from "../images/whiteHeart.svg";
 import { useState } from "react";
-import styled from 'styled-components'
 import * as C from '../styles'
 
 type ProductItemProps = {
