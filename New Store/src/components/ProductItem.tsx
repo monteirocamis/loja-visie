@@ -1,10 +1,11 @@
-import { Button, Card, Col, Row, Toast ,ToastContainer  } from "react-bootstrap";
+import { Button, Card, Col, Row, Toast, ToastContainer } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { formatCurrency } from "../utilities/formatCurrency";
-import blackHeart from '../images/blackHeart.svg'
-import whiteHeart from '../images/whiteHeart.svg'
+import blackHeart from "../images/blackHeart.svg";
+import whiteHeart from "../images/whiteHeart.svg";
 import { useState } from "react";
-import FavoritedToasted from "./FavoritedToast";
+import styled from 'styled-components'
+import * as C from '../styles'
 
 type ProductItemProps = {
   id: number;
@@ -12,11 +13,12 @@ type ProductItemProps = {
   price: number;
   thumbnail: string;
   brand: string;
-  discount: number;
+  discountPercentage: number;
   description: string;
   rating: string;
-  stock:number
+  stock: number;
 };
+
 
 
 
@@ -27,10 +29,10 @@ export function ProductItem({
   price,
   thumbnail,
   brand,
-  discount,
+  discountPercentage,
   description,
   rating,
-  stock
+  stock,
 }: ProductItemProps) {
   const {
     getItemQuantity,
@@ -39,23 +41,22 @@ export function ProductItem({
     removeFromCart,
   } = useShoppingCart();
   const quantity = getItemQuantity(id);
-  const [position, setPosition] = useState('top-center');
+  const [position, setPosition] = useState("top-center");
 
-  const [liked, setLiked] = useState(false)
+  const [liked, setLiked] = useState(false);
   const [show, setShow] = useState(false);
 
-  const like = liked ? (blackHeart) : (whiteHeart)
+  const like = liked ? blackHeart : whiteHeart;
   const onClickCurtida = () => {
     if (liked) {
-      setLiked(!liked)
-      liked ? setShow(true) : setShow(false)
- 
+      setLiked(!liked);
+      liked ? setShow(true) : setShow(false);
     } else {
-      setLiked(!liked)
+      setLiked(!liked);
     }
-  }
+  };
 
-  
+ 
   return (
     <Card className="h-100">
       <Card.Img
@@ -66,8 +67,19 @@ export function ProductItem({
       />
       <Card.Body className="d-flex flex-column">
         <Card.Title className="d-flex justify-content-between align-items-baseline mb-4">
-          <span className="fs-2">{title}</span>
-          <span className="ms-2 text-muted">{formatCurrency(price)}</span>
+
+          <p className="fs-2">
+            {title}
+            </p>
+         
+          <img alt={"Icone"} src={like} onClick={onClickCurtida} />
+          <C.Lined className="lined">
+          <p className="ms-2 text-muted lined">
+            {formatCurrency(price)}
+            </p> 
+          </C.Lined>
+            <p className=""> {formatCurrency( price - ((discountPercentage *  price) / 100)  ) } </p>
+
         </Card.Title>
         <div className="d-flex justify-content-between">
           <Card.Subtitle className="mb-2 ">
@@ -75,25 +87,18 @@ export function ProductItem({
             {brand}
           </Card.Subtitle>
           <Card.Subtitle className="mb-2 ">
-          <strong>Reputação:</strong> {rating}
+            <strong>Reputação:</strong> {rating}
           </Card.Subtitle>
         </div>
         <Card.Text className="">
-          <span className="fs-2">{description}</span>
+          <p className="fs-2">
+            {description}
+            </p>
         </Card.Text>
         <Card.Subtitle className="mb-2 ">
-          {stock}<strong> em estoque</strong> 
-          </Card.Subtitle>
-
-          <div>
-         
-        <img alt={'Icone'} src={like}   onClick={onClickCurtida}/>
-      {/* { liked ? (  
-  <FavoritedToasted/>
-          ) : <></>
-        } */}
-          </div>
-
+          {stock}
+          <strong> em estoque</strong>
+        </Card.Subtitle>
 
         <div className="mt-auto">
           {quantity === 0 ? (
@@ -111,7 +116,7 @@ export function ProductItem({
               >
                 <Button onClick={() => decreaseCartQuantity(id)}>-</Button>
                 <div>
-                  <span className="fs-3">{quantity}</span> no carrinho
+                  <p className="fs-3">{quantity}</p> no carrinho
                 </div>
                 <Button onClick={() => increaseCartQuantity(id)}>+</Button>
               </div>
