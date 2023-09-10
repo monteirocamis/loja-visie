@@ -9,7 +9,7 @@ export function Navbar() {
       <Container>
         <Nav className="me-auto">
           <Nav.Link to="/" as={NavLink}>
-            Loja
+            LOGO
           </Nav.Link>
            <Nav.Link to="/productdetails" as={NavLink}>
             Produto 

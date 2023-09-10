@@ -5,8 +5,11 @@ import blackHeart from "../images/blackHeart.svg";
 import whiteHeart from "../images/whiteHeart.svg";
 import { useState } from "react";
 import * as C from '../styles'
+import { useNavigate } from "react-router-dom";
+// import {ProductItemProps} from '../types/product'
 
-type ProductItemProps = {
+
+export type ProductItemProps = {
   id: number;
   title: string;
   price: number;
@@ -17,8 +20,6 @@ type ProductItemProps = {
   rating: number;
   stock: number;
 };
-
-
 
 
 
@@ -33,6 +34,8 @@ export function ProductItem({
   rating,
   stock,
 }: ProductItemProps) {
+
+  
   const {
     getItemQuantity,
     increaseCartQuantity,
@@ -44,7 +47,7 @@ export function ProductItem({
 
   const [liked, setLiked] = useState(false);
   const [show, setShow] = useState(false);
-
+  const navigate = useNavigate();
   const like = liked ? blackHeart : whiteHeart;
   const onClickCurtida = () => {
     if (liked) {

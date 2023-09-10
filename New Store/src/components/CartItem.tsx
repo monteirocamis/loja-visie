@@ -2,11 +2,7 @@ import { Button, Stack } from "react-bootstrap"
 import { useShoppingCart } from "../context/ShoppingCartContext"
 import storeItems from "../data/items.json"
 import { formatCurrency } from "../utilities/formatCurrency"
-
-type CartItemProps = {
-  id: number
-  quantity: number
-}
+import {CartItemProps} from '../types/cart'
 
 export function CartItem({ id, quantity }: CartItemProps) {
   const { removeFromCart } = useShoppingCart()
@@ -29,7 +25,8 @@ export function CartItem({ id, quantity }: CartItemProps) {
           )}
         </div>
         <div className="text-muted" style={{ fontSize: ".75rem" }}>
-          {formatCurrency(item.price)}
+
+          {formatCurrency(item.price - ((item.discountPercentage *  item.price) / 100)  ) }
         </div>
       </div>
       <div> {formatCurrency(item.price * quantity)}</div>
