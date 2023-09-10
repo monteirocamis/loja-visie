@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@types/styled-components": "^5.1.26",
+    "bootstrap-icons": "^1.10.5",
     "styled-components": "^6.0.7"
   }
 }

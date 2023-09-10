@@ -29,7 +29,8 @@ export function CartItem({ id, quantity }: CartItemProps) {
           )}
         </div>
         <div className="text-muted" style={{ fontSize: ".75rem" }}>
-          {formatCurrency(item.price)}
+
+          {formatCurrency(item.price - ((item.discountPercentage *  item.price) / 100)  ) }
         </div>
       </div>
       <div> {formatCurrency(item.price * quantity)}</div>

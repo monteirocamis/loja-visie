@@ -6,7 +6,7 @@ import { About } from "./pages/About"
 import { ProductDetails } from "./pages/ProductDetails"
 import { Navbar } from "./components/Navbar"
 import { ShoppingCartProvider } from "./context/ShoppingCartContext"
-
+import   './globals.css'
 
 function App() {
   return (
