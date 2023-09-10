@@ -3,10 +3,8 @@ import { useShoppingCart } from "../context/ShoppingCartContext"
 import { formatCurrency } from "../utilities/formatCurrency"
 import { CartItem } from "./CartItem"
 import storeItems from "../data/items.json"
+import { ShoppingCartProps} from '../types/cart'
 
-type ShoppingCartProps = {
-  isOpen: boolean
-}
 
 export function ShoppingCart({ isOpen }: ShoppingCartProps) {
   const { closeCart, cartItems } = useShoppingCart()

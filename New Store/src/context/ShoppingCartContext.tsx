@@ -1,28 +1,9 @@
 import { createContext, ReactNode, useContext, useState } from "react"
 import { ShoppingCart } from "../components/ShoppingCart"
 import { useLocalStorage } from "../hooks/useLocalStorage"
+import {ShoppingCartProviderProps , CartItem , ShoppingCartContextTypes } from '../types/cart'
 
-type ShoppingCartProviderProps = {
-  children: ReactNode
-}
-
-type CartItem = {
-  id: number
-  quantity: number
-}
-
-type ShoppingCartContext = {
-  openCart: () => void
-  closeCart: () => void
-  getItemQuantity: (id: number) => number
-  increaseCartQuantity: (id: number) => void
-  decreaseCartQuantity: (id: number) => void
-  removeFromCart: (id: number) => void
-  cartQuantity: number
-  cartItems: CartItem[]
-}
-
-const ShoppingCartContext = createContext({} as ShoppingCartContext)
+const ShoppingCartContext = createContext({} as ShoppingCartContextTypes)
 
 export function useShoppingCart() {
   

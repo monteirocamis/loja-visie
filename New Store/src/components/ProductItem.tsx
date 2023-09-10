@@ -5,22 +5,7 @@ import blackHeart from "../images/blackHeart.svg";
 import whiteHeart from "../images/whiteHeart.svg";
 import { useState } from "react";
 import * as C from '../styles'
-
-type ProductItemProps = {
-  id: number;
-  title: string;
-  price: number;
-  thumbnail: string;
-  brand: string;
-  discountPercentage: number;
-  description: string;
-  rating: number;
-  stock: number;
-};
-
-
-
-
+import {ProductItemProps} from '../types/product'
 
 export function ProductItem({
   id,
