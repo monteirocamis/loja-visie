@@ -48,6 +48,11 @@ export function ProductItem({
   const [liked, setLiked] = useState(false);
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
+
+  const handleProductDetails = () => {
+   navigate(`/productdetails/${id}` );
+  };
+
   const like = liked ? blackHeart : whiteHeart;
   const onClickCurtida = () => {
     if (liked) {
@@ -66,6 +71,7 @@ export function ProductItem({
         src={thumbnail}
         height="200px"
         style={{ objectFit: "cover" }}
+        onClick={handleProductDetails}
       />
       <Card.Body className="d-flex flex-column">
         <Card.Title className="d-flex justify-content-between align-items-baseline mb-4">
