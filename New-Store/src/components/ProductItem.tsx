@@ -1,11 +1,12 @@
 import { Button, Card, Col, Row, Toast, ToastContainer } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { formatCurrency } from "../utilities/formatCurrency";
-import blackHeart from "../images/blackHeart.svg";
-import whiteHeart from "../images/whiteHeart.svg";
+// import blackHeart from "../images/blackHeart.svg";
+// import whiteHeart from "../images/whiteHeart.svg";
 import { useState } from "react";
 import * as C from '../styles'
 import { useNavigate } from "react-router-dom";
+import { Liked } from "./Liked";
 // import {ProductItemProps} from '../types/product'
 
 
@@ -53,15 +54,15 @@ export function ProductItem({
    navigate(`/productdetails/${id}` );
   };
 
-  const like = liked ? blackHeart : whiteHeart;
-  const onClickCurtida = () => {
-    if (liked) {
-      setLiked(!liked);
-      liked ? setShow(true) : setShow(false);
-    } else {
-      setLiked(!liked);
-    }
-  };
+  // const like = liked ? blackHeart : whiteHeart;
+  // const onClickCurtida = () => {
+  //   if (liked) {
+  //     setLiked(!liked);
+  //     liked ? setShow(true) : setShow(false);
+  //   } else {
+  //     setLiked(!liked);
+  //   }
+  // };
 
  
   return (
@@ -80,7 +81,8 @@ export function ProductItem({
             {title}
             </p>
          
-          <img alt={"Icone"} src={like} onClick={onClickCurtida} />
+          {/* <img alt={"Icone"} src={like} onClick={onClickCurtida} /> */}
+          <Liked/>
           <C.Lined className="lined">
           <p className="ms-2 text-muted lined">
             {formatCurrency(price)}
