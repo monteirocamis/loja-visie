@@ -1,4 +1,4 @@
-import {api} from '../data/api'
+import { api } from '../data/api';
 
 export const fetchProducts = async (dispatch: any) => {
     dispatch({
@@ -20,7 +20,7 @@ export const fetchProducts = async (dispatch: any) => {
       throw error
     }
   }
-  export const fetchProductDetail = async ({dispatch  , id}) => {
+  export const fetchProductDetail = async ({ dispatch, id }: { dispatch: any; id: any }) => {
    
     dispatch({
       type: "FETCH_PRODUCT_DETAIL"
