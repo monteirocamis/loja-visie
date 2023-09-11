@@ -1,16 +1,10 @@
-import { Carousel, Row, Col, Card, Container, Button } from "react-bootstrap";
-import { ProductItem } from "../components/ProductItem";
-import storeItems from "../data/items.json";
-import { formatCurrency } from "../utilities/formatCurrency";
-import { CartItem } from "../components/CartItem";
-import { useShoppingCart } from "../context/ShoppingCartContext";
-import styled from "styled-components";
-import { BackIcon } from "../images/icons/arrow-left-square-fill";
-import { useNavigate, useParams } from "react-router-dom";
-import { ProductItemProps } from "../components/ProductItem";
-import * as C from "../styles";
 import { useContext, useEffect } from "react";
+import { Button, Card } from "react-bootstrap";
+import { useNavigate, useParams } from "react-router-dom";
 import { APIContextType, contextAPI } from "../context/AllProducts";
+import { BackIcon } from "../images/icons/arrow-left-square-fill";
+import * as C from "../styles";
+import { formatCurrency } from "../utilities/formatCurrency";
 import { fetchProductDetail } from "./actions";
 
 export default function ProductDetails() {
