@@ -9,24 +9,23 @@ import { BackIcon } from "../images/icons/arrow-left-square-fill";
 import { useNavigate, useParams } from "react-router-dom";
 import { ProductItemProps } from "../components/ProductItem";
 import * as C from "../styles";
+import { useContext, useEffect } from "react";
+import { APIContextType, contextAPI } from "../context/AllProducts";
+import { fetchProductDetail } from "./actions";
 
-export function ProductDetails({
-  id,
-  title,
-  price,
-  thumbnail,
-  brand,
-  discountPercentage,
-  description,
-  rating,
-  stock,
-}: ProductItemProps) {
+export default function ProductDetails() {
   // const { closeCart, cartItems } = useShoppingCart()
   const navigate = useNavigate();
+  const pathParams = useParams();
 
   const handleBack = () => {
     navigate("/");
   };
+  const { api, dispatch } = useContext<APIContextType>(contextAPI)!;
+  useEffect(() => {
+    fetchProductDetail({ dispatch, id: pathParams.id });
+    console.log(api.productDetail);
+  }, [fetchProductDetail, dispatch]);
 
   return (
     <>
@@ -47,40 +46,39 @@ export function ProductDetails({
       <Card className="h-100">
         <Card.Img
           variant="top"
-          src={thumbnail}
+          src={api.productDetail?.thumbnail}
           height="200px"
           style={{ objectFit: "cover" }}
         />
         <Card.Body className="d-flex flex-column">
           <Card.Title className="d-flex justify-content-between align-items-baseline mb-4">
-            <p className="fs-2">{title}</p>
+            <p className="fs-2">{api.productDetail?.title}</p>
 
             <img
               alt={"Icone"}
               // src={like} onClick={onClickCurtida}
             />
             <C.Lined className="lined">
-              <p className="ms-2 text-muted ">{formatCurrency(price)}</p>
+              <p className="ms-2 text-muted ">{formatCurrency(api.productDetail?.price)}</p>
             </C.Lined>
             <p className="">
-           
-              {formatCurrency(price - (discountPercentage * price) / 100)}{" "}
+              {formatCurrency(api.productDetail?.price - (api.productDetail?.discountPercentage * api.productDetail?.price) / 100)}{" "}
             </p>
           </Card.Title>
           <div className="d-flex justify-content-between">
             <Card.Subtitle className="mb-2 ">
               <strong>Marca:</strong>
-              {brand}
+              {api.productDetail?.brand}
             </Card.Subtitle>
             <Card.Subtitle className="mb-2 ">
-              <strong>Reputação:</strong> {rating}
+              <strong>Reputação:</strong> {api.productDetail?.rating}
             </Card.Subtitle>
           </div>
           <Card.Text className="">
-            <p className="fs-2">{description}</p>
+            <p className="fs-2">{api.productDetail?.description}</p>
           </Card.Text>
           <Card.Subtitle className="mb-2 ">
-            {stock}
+            {api.productDetail?.stock}
             <strong> em estoque</strong>
           </Card.Subtitle>
 
