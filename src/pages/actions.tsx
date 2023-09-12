@@ -20,6 +20,8 @@ export const fetchProducts = async (dispatch: any) => {
       throw error
     }
   }
+
+
   export const fetchProductDetail = async ({ dispatch, id }: { dispatch: any; id: any }) => {
    
     dispatch({
@@ -35,6 +37,29 @@ export const fetchProducts = async (dispatch: any) => {
       if (error.response.status === 401){
         dispatch({
           type: "FETCH_PRODUCT_DETAIL_FAIL"
+        });
+      }
+  
+      throw error
+    }
+  }
+
+
+
+  export const setCart = async ({ dispatch, value }: { dispatch: any; value: any }) => {
+   
+    dispatch({
+      type: "SET_CART"
+    });
+    try {
+     dispatch({
+        type: "SET_CART_SUCESS",
+        payload: value
+      });
+    } catch(error: any) {
+      if (error.response.status === 401){
+        dispatch({
+          type: "SET_CART_FAIL"
         });
       }
   

@@ -1,5 +1,9 @@
 import styled from 'styled-components' ;
 
+export const CenteredContainer = styled.div`
+margin: 0 30%;
+`;
+
 export const Lined = styled.div`
   text-decoration: line-through;
   color: #454b50;
