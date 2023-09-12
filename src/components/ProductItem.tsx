@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as C from '../styles';
 import Liked from "./Liked";
+import { setCart } from "../pages/actions";
 
 
 
@@ -51,20 +52,13 @@ export function ProductItem({
   const handleProductDetails = () => {
    navigate(`/productdetails/${id}` );
   };
-
-  // const like = liked ? blackHeart : whiteHeart;
-  // const onClickCurtida = () => {
-  //   if (liked) {
-  //     setLiked(!liked);
-  //     liked ? setShow(true) : setShow(false);
-  //   } else {
-  //     setLiked(!liked);
-  //   }
-  // };
+  const handleCart = (value : any) => { 
+    setCart(value)
+  }
 
  
   return (
-    <Card className="h-100">
+    <Card className="h-100"  >
       <Card.Img
         variant="top"
         src={thumbnail}
@@ -78,8 +72,7 @@ export function ProductItem({
           <p className="fs-2">
             {title}
             </p>
-         
-          {/* <img alt={"Icone"} src={like} onClick={onClickCurtida} /> */}
+       
           <Liked/>
           <C.Lined className="lined">
           <p className="ms-2 text-muted lined">
