@@ -54,7 +54,8 @@ MIT
 
 ## 🎁 Expressões de gratidão
 
-* Obrigada Marcelo e Visie pela oportunidade de demonstrar meus conhecimentos. Muito obrigada Daviny por ser a melhor amiga ever! Segurando minha mão sempre que me desesperei com os bugs da vida!
+* Obrigada Marcelo e Visie pela oportunidade de demonstrar meus conhecimentos.
+Muito obrigada Daviny por ser a melhor amiga ever! Segurando minha mão sempre que me desesperei com os bugs da vida!
 
 ---
 ⌨️ com ❤️ por [Camis Monteiro](https://gist.github.com/monteirocamis) 
