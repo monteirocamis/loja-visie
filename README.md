@@ -29,6 +29,14 @@ Site com layout resumido para simulação de e-commerce, em processo seletivo da
 - Detalhes do produto 🐞
 
 
+
+
+## Tarefas organizadas no Trello:
+<img width="1421" alt="Screenshot 2023-09-12 at 03 57 42" src="https://github.com/monteirocamis/loja-visie/assets/26682838/6ce94d2a-8a64-422c-b9eb-9f3b803d7b75">
+
+___
+
+
 ## 🚀 Começando
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
@@ -52,9 +60,6 @@ De que coisas você precisa para instalar o software e como instalá-lo?
 node arquivo.test.js 
  ou clicar em run no bloco de código a ser testado
 
-### 🔩 Analise os testes de ponta a ponta
-
-- Melhoria futura
 
 ## 📦 Implantação
 
@@ -75,6 +80,8 @@ Deploy de build automático e gratuito para visualização do projeto pela Verce
 ## ✒️ Autores
 
 * **Desenvolvedora**  -  [Camis Monteiro](https://gist.github.com/monteirocamis) 
+
+
 
 ## 📄 Licença
 
