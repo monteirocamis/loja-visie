@@ -1,13 +1,11 @@
 import { Button, Card } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { formatCurrency } from "../utilities/formatCurrency";
-// import blackHeart from "../images/blackHeart.svg";
-// import whiteHeart from "../images/whiteHeart.svg";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as C from '../styles';
 import Liked from "./Liked";
-// import {ProductItemProps} from '../types/product'
+
 
 
 export type ProductItemProps = {

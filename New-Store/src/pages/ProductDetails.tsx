@@ -49,10 +49,7 @@ export default function ProductDetails() {
           <Card.Title className="d-flex justify-content-between align-items-baseline mb-4">
             <p className="fs-2">{api.productDetail.title}</p>
 
-            {/* <img
-              alt={"Icone"}
-              src={like} onClick={onClickCurtida}
-            /> */}
+           
             <C.Lined className="lined">
               <p className="ms-2 text-muted ">
                 {formatCurrency(api.productDetail.price)}
