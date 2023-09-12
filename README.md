@@ -2,9 +2,37 @@
 
 Site com layout resumido para simulação de e-commerce, em processo seletivo da empresa Visie.
 
+
+
+
+
+### Ⓜ️ Build main - última atualização
+[loja - V 3.0 ](https://store-monteirocamis.vercel.app)
+
+- Loja✅
+- Carrinho🐞
+- Detalhes do produto✅
+  
+- ### 😎 Build consumindo api 
+[store visie - V 2.0 ](https://storevisie-monteirocamis.vercel.app)
+
+- Loja✅
+- Carrinho🐞
+- Detalhes do produto✅
+
+
+### 📎 Build mockado
+[store visie - V 2.0 ](https://storevisie-monteirocamis.vercel.app)
+
+- Loja ✅
+- Carrinho✅
+- Detalhes do produto 🐞
+
+
 ## 🚀 Começando
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
+
 
 
 ### 📋 Pré-requisitos
