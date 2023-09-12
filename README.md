@@ -7,7 +7,7 @@ Site com layout resumido para simulação de e-commerce, em processo seletivo da
 
 
 ### Ⓜ️ Build main - última atualização
-[loja - V 3.0 ](https://store-monteirocamis.vercel.app)
+[loja - V 2.1 ](https://store-monteirocamis.vercel.app)
 
 - Loja✅
 - Carrinho🐞
@@ -22,7 +22,7 @@ Site com layout resumido para simulação de e-commerce, em processo seletivo da
 
 
 ### 📎 Build mockado
-[store visie - V 2.0 ](https://storevisie-monteirocamis.vercel.app)
+[store visie - V 1.0 ](https://storevisie-monteirocamis.vercel.app)
 
 - Loja ✅
 - Carrinho✅
