@@ -1,8 +1,30 @@
 {
+  "name": "dummystore",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
   "dependencies": {
-    "@types/styled-components": "^5.1.26",
-    "bootstrap-icons": "^1.10.5",
-    "react-axios": "^2.0.6",
-    "styled-components": "^6.0.7"
+    "@types/axios": "^0.14.0",
+    "@types/react-bootstrap": "^0.32.32",
+    "@types/styled-components": "^5.1.27",
+    "axios": "^1.5.0",
+    "bootstrap": "^5.1.3",
+    "react": "^18.0.0",
+    "react-bootstrap": "^2.4.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.3.0",
+    "styled-components": "^6.0.7",
+    "vite": ">=2.9.9"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^1.3.0",
+    "typescript": "^4.6.3",
+    "vite": ">=2.9.9"
   }
 }
