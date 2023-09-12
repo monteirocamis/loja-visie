@@ -32,26 +32,6 @@ export const reducer = (state: any, action: any) => {
         productDetailError: true,
       };
 
-
-
-      case "SET_CART":
-        return {
-          cart: {},
-          cartError: false,
-        };
-      case "SET_CART_SUCESS":
-        return {
-          ...state,
-          cart: [ ...state.cart , action.payload ] ,
-        };
-      case "SET_CART_FAIL":
-        return {
-          ...state,
-          cartError: true,
-        };
-
-
-
     default:
       throw new Error();
   }

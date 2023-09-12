@@ -8,17 +8,21 @@ import { fetchProducts } from "./actions";
 
 
 export function Store() {
+  const navigate = useNavigate();
+  const handleProductDetails = () => {
+    navigate("/productdetails" );
+  };
+  
+  
   const { api, dispatch } = useContext<APIContextType>(contextAPI)!;
   
   useEffect(() => {
     fetchProducts( dispatch)
   }, [fetchProducts, dispatch]);
-  
-  
 
   return (
     <>
-   
+      <h1>Store</h1>
       <Row md={2} xs={1} lg={3} className="g-3">
         {api?.products?.products?.map((item : any) => (
           <Col key={item.id} >

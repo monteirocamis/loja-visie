@@ -1,13 +1,13 @@
 import React, { createContext, useReducer, ReactNode } from "react";
 import { reducer } from "../reducer/reducer";
 
-
+// Defina o tipo para o estado inicial
 interface InitialStateType {
   products: {
-    products:[]
+    products: [];
   };
-  productDetail:{
-    productDetail:{}
+  productDetail: {
+    productDetail: {};
     id: number;
     title: string;
     price: number;
@@ -17,42 +17,39 @@ interface InitialStateType {
     description: string;
     rating: number;
     stock: number;
-  }
+  };
 }
 
+// Defina o tipo para o contexto
 export interface APIContextType {
   api: InitialStateType;
   dispatch: React.Dispatch<any>;
-  
 }
 
 export const contextAPI = createContext<APIContextType | any>(undefined);
 
-
+// Aceite 'children' como um tipo ReactNode
 interface APIContextProviderProps {
   children: ReactNode;
 }
 
 const initialState: InitialStateType = {
   products: {
-    products:[]
+    products: [],
   },
-  productDetail:{
-    productDetail:{},
+  productDetail: {
+    productDetail: {},
     id: 0,
-    title: '',
+    title: "",
     price: 0,
-    thumbnail: '',
-    brand: '',
+    thumbnail: "",
+    brand: "",
     discountPercentage: 0,
-    description: '',
+    description: "",
     rating: 0,
     stock: 0,
-
-    
-  }
+  },
 };
-
 export const APIContextProvider: React.FC<APIContextProviderProps> = ({
   children,
 }: APIContextProviderProps) => {

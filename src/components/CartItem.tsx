@@ -1,13 +1,13 @@
-import { Button, Stack } from "react-bootstrap";
-import { useShoppingCart } from "../context/ShoppingCartContext";
-import storeItems from "../data/items.json";
-import { CartItemProps } from "../types/cart";
-import { formatCurrency } from "../utilities/formatCurrency";
+import { Button, Stack } from "react-bootstrap"
+import { useShoppingCart } from "../context/ShoppingCartContext"
+import storeItems from "../data/items.json"
+import { formatCurrency } from "../utilities/formatCurrency"
+import {CartItemProps} from '../types/cart'
 
 export function CartItem({ id, quantity }: CartItemProps) {
-  const { removeFromCart } = useShoppingCart();
-  const item = storeItems.find((i) => i.id === id);
-  if (item == null) return null;
+  const { removeFromCart } = useShoppingCart()
+  const item = storeItems.find(i => i.id === id)
+  if (item == null) return null
 
   return (
     <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
@@ -25,9 +25,8 @@ export function CartItem({ id, quantity }: CartItemProps) {
           )}
         </div>
         <div className="text-muted" style={{ fontSize: ".75rem" }}>
-          {formatCurrency(
-            item.price - (item.discountPercentage * item.price) / 100
-          )}
+
+          {formatCurrency(item.price - ((item.discountPercentage *  item.price) / 100)  ) }
         </div>
       </div>
       <div> {formatCurrency(item.price * quantity)}</div>
@@ -39,5 +38,5 @@ export function CartItem({ id, quantity }: CartItemProps) {
         &times;
       </Button>
     </Stack>
-  );
+  )
 }
